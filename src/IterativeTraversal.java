@@ -1,5 +1,5 @@
-import java.awt.List;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 
@@ -7,7 +7,7 @@ public class IterativeTraversal {
 
 	public void IterativeInorder(TreeNode root){
 		Stack<TreeNode> s= new Stack<TreeNode>();
-		ArrayList<Integer> answ= new ArrayList<Integer>();
+		 List<Integer> ans= new ArrayList<>();
 		
 		while(true){
 			if(root!=null){
@@ -18,6 +18,7 @@ public class IterativeTraversal {
 				if(s.size()!=0){
 					TreeNode curr= s.pop();
 					System.out.print(curr.val+", ");
+					ans.add(curr.val);
 					root=curr.right;
 					continue;
 				}else{
@@ -25,6 +26,7 @@ public class IterativeTraversal {
 				}
 			}
 		}
+		//System.out.println(answ);
 	}
 	
 	public void IterativePreorder(TreeNode root){
