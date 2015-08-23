@@ -259,13 +259,30 @@ public class BST implements BSTInterface {
 		else return LastLeft.key;
 	}
 
+	public int getPredecessor(int key){
+		Node current=root;
+		Node lastRight=root;
+		while(current.key!=key){
+			
+			if(current.key>key){
+				current=current.left;
+			}else{
+				lastRight=current;
+				current=current.right;
+			}
+		}
+		
+		if(current.left!=null){
+			return getMinimun(current.left);
+		}else return lastRight.key;
+	}
+	
+	
 	private int getMinimun(Node current) {
 		Node successor=current;
-		Node successorParent=current;
 		Node curr=current.right;
 		
 		while(curr!=null){
-			successorParent=successor;
 			successor=curr;
 			curr=curr.left;
 		}
@@ -296,7 +313,29 @@ public class BST implements BSTInterface {
 		}
 		
 	}
+	
+	private int counter = 0;
+	private int result = -1;
 
+	public int kthSmallest(int k) {
+		counter = 0;
+		helperS(root, k);
+		return result;
+	}
+
+	private void helperS(Node root, int k) {
+
+		if (root.left != null)
+			helperS(root.left, k);
+		counter++;
+		if (k == counter) {
+			this.result = root.key;
+			return;
+		}
+		if (root.right != null)
+			helperS(root.right, k);
+
+	}
 	
 	
 

@@ -9,39 +9,44 @@ public class driver {
 
 	public static void main(String args[]) {
 
-//		BST tree = new BST();
-//		tree.insert(43, 43);
-//		tree.insert(21, 21);
-//		tree.insert(56, 56);
-//		tree.insert(14, 14);
-//		tree.insert(35, 35);
-//		tree.insert(55, 55);
-//		tree.insert(97, 97);
-//
-//		System.out.println("find 23=" + tree.find(23));
-//		System.out.println("find 35=" + tree.find(35));
-//		System.out.println("*******TRAVERSE**********");
-//		tree.traverce(0);
-//		System.out.println();
-//		tree.traverce(1);
-//		System.out.println();
-//		tree.traverce(2);
-//		System.out.println();
-//		System.out.println("*******TRAVERSE END*******");
-//		System.out.println("height=" + tree.height());
-//
-//		System.out.println("no. of node=" + tree.numofnodes());
-//
-//		List<Integer> ans = tree.rightSideView();
-//		System.out.println("RIGHT SIDE VIEW"+Arrays.toString(ans.toArray()));
-//		
-//		tree.traverce(0);
-//		System.out.println();
-//		System.out.println("BFS ");
-//		tree.BFS();
-//		System.out.println();
-//		int succ=tree.getSuccessor(55);
-//		System.out.println("successor of 55 is = "+succ);
+		BST tree = new BST();
+		tree.insert(43, 43);
+		tree.insert(21, 21);
+		tree.insert(56, 56);
+		tree.insert(14, 14);
+		tree.insert(35, 35);
+		tree.insert(55, 55);
+		tree.insert(97, 97);
+
+		System.out.println("find 23=" + tree.find(23));
+		System.out.println("find 35=" + tree.find(35));
+		System.out.println("*******TRAVERSE**********");
+		tree.traverce(0);
+		System.out.println();
+		tree.traverce(1);
+		System.out.println();
+		tree.traverce(2);
+		System.out.println();
+		System.out.println("*******TRAVERSE END*******");
+		System.out.println("height=" + tree.height());
+
+		System.out.println("no. of node=" + tree.numofnodes());
+
+		List<Integer> ans = tree.rightSideView();
+		System.out.println("RIGHT SIDE VIEW"+Arrays.toString(ans.toArray()));
+		
+		tree.traverce(0);
+		System.out.println();
+		System.out.println("BFS ");
+		tree.BFS();
+		System.out.println();
+		int succ=tree.getSuccessor(55);
+		System.out.println("successor of 55 is = "+succ);
+		int pre=tree.getPredecessor(43);
+		System.out.println("Predecessor of 43 is = "+pre);
+		int ksmall=tree.kthSmallest(2);
+		System.out.println("2 nd smallest node= "+ksmall);
+		
 //		
 //		List<Integer> ansLeft = tree.leftSideView();
 //		System.out.println("LEFT SIDE VIEW"+Arrays.toString(ansLeft.toArray()));
@@ -85,9 +90,9 @@ public class driver {
 //		int lol=Integer.valueOf(i)*2;
 //		System.out.println(lol);
 		
-		BSTImproved newo= new BSTImproved();
-		ArrayList<Integer> output= newo.inorderRec(a, new ArrayList<Integer>());
-		System.out.println(output);
+//		BSTImproved newo= new BSTImproved();
+//		ArrayList<Integer> output= newo.inorderRec(a, new ArrayList<Integer>());
+//		System.out.println(output);
 	}
 
 }
